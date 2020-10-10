@@ -27,17 +27,17 @@ def add_numbers_post():
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
   	      print(request.form['weight'])
-	      l_unit = text.lower()
+	      #l_unit = text.lower()
 	      weights = request.form['weight']
 	      kg_convert = int('weights') * 0.45
-	      lbs_convert = int('weights') / 0.45
+	      #lbs_convert = int('weights') / 0.45
 	      
   	      #total = 1
   	      try:
-		if l_unit == "l":
-    	       		total = print("Your Weight is " + str(kg_convert) + " Kilograms")
-	      	else:
-    			total = print("Your Weight is " + str(lbs_convert) + " Pounds")
+		#if l_unit == "l":
+    	       	total = print("Your Weight is " + str(kg_convert) + " Kilograms")
+	      	#else:
+    			#total = print("Your Weight is " + str(lbs_convert) + " Pounds")
   	      	#for str_num in request.form['weight'].split():
   	      	        #total *= int(str_num)
   	      	return render_template('add_numbers.html', result=str(total))

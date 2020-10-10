@@ -29,8 +29,8 @@ def add_numbers_post():
   	      #print(request.form['weight'].split())
 	      print(request.form)
 	      l_unit = text.lower()
-	      kg_convert = weight * 0.45
-	      lbs_convert = weight / 0.45
+	      kg_convert = int('weight') * 0.45
+	      lbs_convert = int('weight') / 0.45
 	      
   	      #total = 1
   	      try:

@@ -35,7 +35,7 @@ def add_numbers_post():
   	      #total = 1
   	      try:
 		#if l_unit == "l":
-    	       	total = print("Your Weight is " + str(kg_convert) + " Kilograms")
+    	       	total = "Your Weight is " + str(kg_convert) + " Kilograms"
 	      	#else:
     			#total = print("Your Weight is " + str(lbs_convert) + " Pounds")
   	      	#for str_num in request.form['weight'].split():

@@ -27,8 +27,15 @@ def add_numbers_post():
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
   	      print(request.form['weight'].split())
+	      #weights = request.form['weight']
+	      #kg_convert = int('weights') * 0.45
+	      #lbs_convert = int('weights') / 0.45
+
+  	      #total = 1
+
 	     
   	      try:
+		
 	      	for str_num in request.form['weight'].split():
     	       		total = int(str_num) * 0.45
   	      	return render_template('add_numbers.html', result=str(total))

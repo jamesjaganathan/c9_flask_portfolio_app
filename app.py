@@ -19,14 +19,15 @@ def profile(name):
 	return render_template('index.html', name=name)
 
 
-@app.route('/add_numbers', methods=['GET','POST'])
-def add_numbers_post():
+#@app.route('/add_numbers', methods=['GET','POST'])
+@app.route('/add_numbers')
+def add_numbers_post(weight, text):
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
-	  if request.method == 'GET':
-	  	return render_template('add_numbers.html')
-	  elif request.method == 'POST':
-  	      print(request.form['weight'].split())
+	  #if request.method == 'GET':
+	  	#return render_template('add_numbers.html')
+	  #elif request.method == 'POST':
+  	      #print(request.form['weight'].split())
 	      #print(request.form)
 	      l_unit = text.lower()
 	      kg_convert = int('weight') * 0.45

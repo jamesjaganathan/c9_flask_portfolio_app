@@ -26,10 +26,10 @@ def add_numbers_post():
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
-  	      print(request.form['text'].split())
+  	      print(request.form['weight'].split())
   	      total = 1
   	      try:
-  	      	for str_num in request.form['text'].split():
+  	      	for str_num in request.form['weight'].split():
   	      		total *= int(str_num)
   	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:

@@ -26,8 +26,8 @@ def add_numbers_post():
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html', weight=weight, text=text)
 	  elif request.method == 'POST':
-  	      #print(request.form['weight'].split())
-	      print(request.form)
+  	      print(request.form['weight'].split())
+	      #print(request.form)
 	      l_unit = text.lower()
 	      kg_convert = int('weight') * 0.45
 	      lbs_convert = int('weight') / 0.45

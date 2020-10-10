@@ -26,20 +26,20 @@ def add_numbers_post():
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
-  	      print(request.form['weight'].split())
-	      #print(request.form)
-	      #l_unit = text.lower()
-	      #kg_convert = int('weight') * 0.45
-	      #lbs_convert = int('weight') / 0.45
+  	      print(request.form['weight'])
+	      l_unit = text.lower()
+	      weights = request.form['weight']
+	      kg_convert = int('weights') * 0.45
+	      lbs_convert = int('weights') / 0.45
 	      
-  	      total = 1
+  	      #total = 1
   	      try:
-		#if l_unit == "l":
-    	       	#total = print("Your Weight is " + str(kg_convert) + " Kilograms")
-	      	#else:
-    			#total = print("Your Weight is " + str(lbs_convert) + " Pounds")
-  	      	for str_num in request.form['weight'].split():
-  	      	        total *= int(str_num)
+		if l_unit == "l":
+    	       		total = print("Your Weight is " + str(kg_convert) + " Kilograms")
+	      	else:
+    			total = print("Your Weight is " + str(lbs_convert) + " Pounds")
+  	      	#for str_num in request.form['weight'].split():
+  	      	        #total *= int(str_num)
   	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"

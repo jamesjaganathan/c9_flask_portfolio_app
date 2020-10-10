@@ -24,7 +24,7 @@ def add_numbers_post(text):
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
-	  	return render_template('add_numbers.html')
+	  	return render_template('add_numbers.html', text)
 	  elif request.method == 'POST':
   	      print(request.form['weight'].split())
 	      l_unit = text.lower()

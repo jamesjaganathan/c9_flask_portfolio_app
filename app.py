@@ -20,26 +20,26 @@ def profile(name):
 
 
 @app.route('/add_numbers', methods=['GET','POST'])
-def add_numbers_post(weight, text):
+def add_numbers_post():
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
-  	      print(request.form['weight'])
+  	      print(request.form['weight'].split())
 	      #print(request.form)
 	      #l_unit = text.lower()
-	      kg_convert = int('weight') * 0.45
+	      #kg_convert = int('weight') * 0.45
 	      #lbs_convert = int('weight') / 0.45
 	      
-  	      #total = 1
+  	      total = 1
   	      try:
 		#if l_unit == "l":
-    	       	total = print("Your Weight is " + str(kg_convert) + " Kilograms")
+    	       	#total = print("Your Weight is " + str(kg_convert) + " Kilograms")
 	      	#else:
     			#total = print("Your Weight is " + str(lbs_convert) + " Pounds")
-  	      	#for str_num in request.form['weight'].split():
-  	      	        #total *= int(str_num)
+  	      	for str_num in request.form['weight'].split():
+  	      	        total *= int(str_num)
   	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"

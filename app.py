@@ -24,10 +24,12 @@ def add_numbers_post(text):
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
-	  	return render_template('add_numbers.html', text)
+	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
   	      print(request.form['weight'].split())
-	      l_unit = text.lower()
+	      print(request.form['text'])
+	      unnit = request.form['text']
+	      l_unit = unit.lower()
 	      #weights = request.form['weight']
 	      #kg_convert = int('weights') * 0.45
 	      #lbs_convert = int('weights') / 0.45

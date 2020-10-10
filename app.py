@@ -26,14 +26,23 @@ def add_numbers_post():
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
-  	      print(request.form['weight'].split())
-  	      total = 1
-  	      try:
-  	      	for str_num in request.form['weight'].split():
-  	      		total *= int(str_num)
-  	      	return render_template('add_numbers.html', result=str(total))
-  	      except ValueError:
-  	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
+  	      #print(request.form['weight'].split())
+	      print(request.form['weight'])
+	      print(request.form['text'])
+	      l_unit = text.lower()
+	      kg_convert = weight * 0.45
+	      lbs_convert = weight / 0.45
+	      if l_unit == "l":
+    	      	total = print("Your Weight is " + str(kg_convert) + " Kilograms")
+	      else:
+    		total = print("Your Weight is " + str(lbs_convert) + " Pounds")
+  	      #total = 1
+  	      #try:
+  	      	#for str_num in request.form['weight'].split():
+  	      		#total *= int(str_num)
+  	      return render_template('add_numbers.html', result=str(total))
+  	      #except ValueError:
+  	      	#return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
 
 @app.route('/shopping_list', methods=['GET','POST'])
